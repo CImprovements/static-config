@@ -6747,7 +6747,7 @@
 			<type>setting</type>
 			<enabled>true</enabled>
 		</param>
-    	<param name="MAppNewBlockCardProcess" description="Обновленный процесс блокировки карт">
+    	<param name="MAppNewBlockingCardProcess" description="Обновленный процесс блокировки карт">
      		<type>service</type>
      		<enabled>true</enabled>
   			<nodes>
