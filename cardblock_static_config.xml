@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <configuration>		
   <params>
+	  <param name="MAppNewBlockingCardProcess" description="Обновленный процесс блокировки карт">
+     		<type>service</type>
+     		<enabled>true</enabled>
+  			<nodes>
+                <node id="node0.online.sberbank.ru">
+                    <enabled>false</enabled>
+                 </node>
+
+                <node id="node1.online.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="node2.online.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="node3.online.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="greenfield1.online.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="mobile.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="ift-node1.testonline.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="ift-node2.testonline.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="ift-node1-mp.testonline.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="ift-node2-mp.testonline.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="psinode2.testonline.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+
+                <node id="psinode1.testonline.sberbank.ru">
+                    <enabled>false</enabled>
+                </node>
+                <node id="194.186.207.23">
+                    <enabled>false</enabled>
+                </node>
+            </nodes>
+         </param>
       	<param name="OptimalAccountTransferWithMaskCheck" description="Определение доступности счета для перевода по его маске">
           <type>list</type>
           <enabled>true</enabled>
@@ -6747,62 +6803,7 @@
 			<type>setting</type>
 			<enabled>true</enabled>
 		</param>
-    	<param name="MAppNewBlockingCardProcess" description="Обновленный процесс блокировки карт">
-     		<type>service</type>
-     		<enabled>true</enabled>
-  			<nodes>
-                <node id="node0.online.sberbank.ru">
-                    <enabled>false</enabled>
-                 </node>
-
-                <node id="node1.online.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="node2.online.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="node3.online.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="greenfield1.online.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="mobile.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="ift-node1.testonline.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="ift-node2.testonline.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="ift-node1-mp.testonline.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="ift-node2-mp.testonline.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="psinode2.testonline.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-
-                <node id="psinode1.testonline.sberbank.ru">
-                    <enabled>false</enabled>
-                </node>
-                <node id="194.186.207.23">
-                    <enabled>false</enabled>
-                </node>
-            </nodes>
-         </param>
+    	
         <param name="VoiceControl" description="Голосовое управление в мобильном приложении">
            <type>list</type>
            <enabled>true</enabled>
