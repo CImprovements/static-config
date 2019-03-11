@@ -7616,9 +7616,23 @@
             <unassignService>true</unassignService>
             <incomesService>true</incomesService>
         </param>
-	<param name="TariffDebitCard" description="Тариф карты">
-		<link>https://github.com/teamjayJust/static-config/edit/master/ci_test_static_config.xml</link>
-		<enabled>false</enabled>
-	</param>
+	    <param name="TariffDebitCard" description="Тариф карты">
+	        <link>https://github.com/teamjayJust/static-config/edit/master/ci_test_static_config.xml</link>
+            <enabled>false</enabled>
+            <nodes>
+                <node id="ift-node1.testonline.sberbank.ru">
+                     <enabled>true</enabled>
+                </node>
+                <node id="ift-node2.testonline.sberbank.ru">
+                    <enabled>true</enabled>
+                </node>
+                <node id="ift-node1-mp.testonline.sberbank.ru">
+                    <enabled>true</enabled>
+                </node> 
+                <node id="ift-node2-mp.testonline.sberbank.ru">
+                    <enabled>true</enabled>
+                </node>
+            </nodes>
+        </param>
     </params>
 </configuration>
