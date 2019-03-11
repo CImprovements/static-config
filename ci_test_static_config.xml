@@ -7617,7 +7617,7 @@
             <incomesService>true</incomesService>
         </param>
 	<param name="TariffDebitCard" description="Тариф карты">
-	    <link>https://github.com/teamjayJust/static-config/edit/master/ci_test_static_config.xml</link>
+	    <link>https://raw.githubusercontent.com/teamjayJust/static-config/master/card_tariffs.xml</link>
             <enabled>false</enabled>
             <nodes>
                 <node id="ift-node1.testonline.sberbank.ru">
