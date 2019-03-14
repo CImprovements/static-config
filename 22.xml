@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs>
+    <cardTypeAccordance>
+        <card>
+            <type>classic</type>
+            <values>MasterCard Mass, MasterCard Standard Бесконтактная, Visa Classic</values>
+        </card>
+        <card>
+            <type>platinum</type>
+            <values>Visa Platinum, MasterCard Platinum, Visa Signature</values>
+        </card>
+        <card>
+            <type>infinite</type>
+            <values>Visa Infinite</values>
+        </card>
+        <card>
+            <type>gold</type>
+            <values>Visa Gold, MasterCard Gold</values>
+        </card>
+        <card>
+            <type>visaDigital</type>
+            <values>Visa Digital</values>
+        </card>
+        <card>
+            <type>visaElectron</type>
+            <values>Maestro, Electron</values>
+        </card>
+        <card>
+            <type>momentum</type>
+            <values>Momentum</values>
+        </card>
+        <card>
+            <type>mir</type>
+            <values>MIR</values>
+        </card>
+    </cardTypeAccordance>
+    <categories>
+        <category>
+            <type>0</type>
+            <title>Годовое обслуживание</title>
+            <conditions>
+                <condition>
+                    <description>обслуживание в первый год</description>
+                    <cardLevel>
+                        <momentum>
+                            <visaDigital>
+                                <tariffValue>
+                                    <specificValue>без комиссии</specificValue>
+                                </tariffValue>
+                            </visaDigital>
+                        </momentum>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>обслуживание в последующие года</description>
+                    <cardLevel>
+                        <momentum>
+                            <visaDigital>
+                                <tariffValue>
+                                    <specificValue>без комиссии</specificValue>
+                                </tariffValue>
+                            </visaDigital>
+                        </momentum>
+                    </cardLevel>
+                </condition>
+            </conditions>
+        </category>
+        <category>
+            <type>1</type>
+            <title>Перевыпуск карты:</title>
+            <conditions>
+                <condition>
+                    <description>по истечении срока действия</description>
+                    <defaultValue>
+                        <value>без комиссии</value>
+                    </defaultValue>
+                    <cardLevel>
+						<momentum>
+							<visaDigital>
+								<tariffValue>
+									<specificValue>операция не осуществляется</specificValue>
+								</tariffValue>
+							</visaDigital>
+						</momentum>	
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>в случае утраты карты карты, ПИН-кода, изменения личных данных держателя карты</description>
+                    <cardLevel>
+                        <momentum>
+							<visaDigital>
+								<tariffValue>
+									<specificValue>операция не осуществляется</specificValue>
+								</tariffValue>
+							</visaDigital>
+                        </momentum>
+                        <visaElectron>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>60 рублей</RUB>
+                                    <USD>2 доллара</USD>
+                                    <EUR>2 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </visaElectron>
+                        <classic>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>150 рублей</RUB>
+                                    <USD>5 долларов</USD>
+                                    <EUR>5 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </classic>
+                        <gold>
+                            <platinum>
+                                <infinite>
+                                    <tariffValue>
+                                        <specificValue>без комиссии</specificValue>
+                                    </tariffValue>
+                                </infinite>
+                            </platinum>
+                        </gold>
+                    </cardLevel>
+                </condition>
+            </conditions>
+        </category>
+        <category>
+            <type>2</type>
+            <title>Комиссия за снятие наличных</title>
+            <conditions>
+                <condition>
+                    <description>В офисах банка, в котором открыта карта, в пределах суточного лимита</description>
+                    <defaultValue>
+                        <value>без комиссии</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <visaDigital>
+                            <tariffValue>
+                                <specificValue>операция не осуществляется</specificValue>
+                            </tariffValue>
+                        </visaDigital>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>В офисах банка, в котором открыта карта,сверх суточного лимита</description>
+                    <defaultValue>
+                        <value>0,5% от суммы превышения лимита</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <visaDigital>
+                            <tariffValue>
+                                <specificValue>операция не осуществляется</specificValue>
+                            </tariffValue>
+                        </visaDigital>
+                        <infinite>
+                            <tariffValue>
+                                <specificValue>без комиссии</specificValue>
+                            </tariffValue>
+                        </infinite>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>В офисах других регионов банка, в пределах суточного лимита</description>
+                    <defaultValue>
+                        <value>без комиссии</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <momentum>
+                            <visaElectron>
+                                <visaDigital>
+                                    <tariffValue>
+                                        <specificValue>0,75% от суммы</specificValue>
+                                    </tariffValue>
+                                </visaDigital>
+                            </visaElectron>
+                        </momentum>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>В офисах других регионов банка, сверх суточного лимита</description>
+                    <defaultValue>
+                        <value>0,5% от суммы превышения лимита</value>
+                    </defaultValue>
+                    <cardLevel>
+						<visaDigital>
+							<tariffValue>
+								<specificValue>операция не осуществляется</specificValue>
+							</tariffValue>
+                        </visaDigital>
+                        <momentum>
+                            <tariffValue>
+                                <specificValue>0,75% от суммы превышения лимита</specificValue>
+                            </tariffValue>
+                        </momentum>
+                        <visaElectron>
+                            <tariffValue>
+                                <specificValue>0,75% от суммы</specificValue>
+                            </tariffValue>
+                        </visaElectron>
+                        <infinite>
+                            <tariffValue>
+                                <specificValue>без комиссии</specificValue>
+                            </tariffValue>
+                        </infinite>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>В офисах дочерних банков</description>
+                    <defaultValue>
+                        <value>без комиссии</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <momentum>
+                            <visaDigital>
+                                <mir>
+                                    <tariffValue>
+                                        <specificValue>операция не осуществляется</specificValue>
+                                    </tariffValue>
+                                </mir>
+                            </visaDigital>
+                        </momentum>
+                        <visaElectron>
+                            <tariffValue>
+                                <specificValue>0,75% от суммы</specificValue>
+                            </tariffValue>
+                        </visaElectron>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>В других банках</description>
+                    <defaultValue>
+                        <value></value>
+                        <byCurrencies>
+                            <RUB>100 рублей</RUB>
+                            <USD>3 доллара</USD>
+                            <EUR>3 евро</EUR>
+                        </byCurrencies>
+                    </defaultValue>
+                    <cardLevel>
+                        <momentum>
+                            <visaDigital>
+                                <tariffValue>
+                                    <specificValue>операция не осуществляется</specificValue>
+                                </tariffValue>
+                            </visaDigital>
+                        </momentum>
+                        <visaElectron>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>150 рублей</RUB>
+                                    <USD>5 долларов</USD>
+                                    <EUR>5 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </visaElectron>
+                        <infinite>
+                            <tariffValue>
+                                <specificValue>без комиссии</specificValue>
+                            </tariffValue>
+                        </infinite>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>В банкоматах, в пределах региона в котором открыта карта</description>
+                    <defaultValue>
+                        <value>без комиссии</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <visaDigital>
+                            <tariffValue>
+                                <specificValue>операция не осуществляется</specificValue>
+                            </tariffValue>
+                        </visaDigital>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>В банкоматах других регионов банка</description>
+                    <defaultValue>
+                        <value>без комиссии</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <momentum>
+                            <visaElectron>
+                                <tariffValue>
+                                    <specificValue>0,75% от суммы</specificValue>
+                                </tariffValue>
+                            </visaElectron>
+                        </momentum>
+                        <visaDigital>
+                            <tariffValue>
+                                <specificValue>операция не осуществляется</specificValue>
+                            </tariffValue>
+                        </visaDigital>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>В банкоматах дочерних банков</description>
+                    <defaultValue>
+                        <value>без комиссии</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <momentum>
+                            <visaDigital>
+                                <mir>
+                                    <tariffValue>
+                                        <specificValue>операция не осуществляется</specificValue>
+                                    </tariffValue>
+                                </mir>
+                            </visaDigital>
+                        </momentum>
+                        <visaElectron>
+                            <tariffValue>
+                                <specificValue>0,75% от суммы</specificValue>
+                            </tariffValue>
+                        </visaElectron>
+                    </cardLevel>
+                </condition>
+            </conditions>
+        </category>
+        <category>
+            <type>4</type>
+            <title>Лимиты на операции</title>
+            <conditions>
+                <condition>
+                    <description>Месячный лимит через кассы и банкоматы банка</description>
+                    <cardLevel>
+                        <momentum>
+                            <visaDigital>
+                                <tariffValue>
+                                    <specificValue></specificValue>
+                                    <byCurrencies>
+                                        <RUB>100 000 рублей</RUB>
+                                        <USD>3000 долларов</USD>
+                                        <EUR>2500 евро</EUR>
+                                    </byCurrencies>
+                                </tariffValue>
+                            </visaDigital>
+                        </momentum>
+                        <visaElectron>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>500 000 рублей</RUB>
+                                    <USD>16 000 долларов</USD>
+                                    <EUR>12 500 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </visaElectron>
+                        <classic>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>1 500 000 рублей</RUB>
+                                    <USD>50 000 долларов</USD>
+                                    <EUR>37 500 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </classic>
+                        <gold>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>3 000 000 рублей</RUB>
+                                    <USD>100 000 долларов</USD>
+                                    <EUR>75 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </gold>
+                        <platinum>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>5 000 000 рублей</RUB>
+                                    <USD>170 000 долларов</USD>
+                                    <EUR>125 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </platinum>
+                        <infinite>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>30 000 000 рублей</RUB>
+                                    <USD>1 000 000 долларов</USD>
+                                    <EUR>750 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </infinite>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>Суточный лимит в кассах банка</description>
+                    <cardLevel>
+                        <momentum>
+                            <visaDigital>
+                                <visaElectron>
+                                    <tariffValue>
+                                        <specificValue></specificValue>
+                                        <byCurrencies>
+                                            <RUB>50 000 рублей</RUB>
+                                            <USD>1600 долларов</USD>
+                                            <EUR>1200 евро</EUR>
+                                        </byCurrencies>
+                                    </tariffValue>
+                                </visaElectron>
+                            </visaDigital>
+                        </momentum>
+                        <classic>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>150 000 рублей</RUB>
+                                    <USD>6 000 долларов</USD>
+                                    <EUR>4 500 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </classic>
+                        <gold>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>300 000 рублей</RUB>
+                                    <USD>12 000 долларов</USD>
+                                    <EUR>9 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </gold>
+                        <platinum>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>500 000 рублей</RUB>
+                                    <USD>12 500 долларов</USD>
+                                    <EUR>10 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </platinum>
+                        <infinite>
+                            <tariffValue>
+                                <specificValue>не предусмотрен</specificValue>
+                            </tariffValue>
+                        </infinite>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>Суточный лимит в кассах дочерних банков/других кредитных организаций</description>
+                    <defaultValue>
+                        <value>отсутствует</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <momentum>
+                            <visaDigital>
+                                <tariffValue>
+                                    <specificValue>операция не осуществляется</specificValue>
+                                </tariffValue>
+                            </visaDigital>
+                        </momentum>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>Суточный лимит в банкоматах банка</description>
+                    <cardLevel>
+                        <visaDigital>
+                            <tariffValue>
+                                <specificValue>операция не осуществляется</specificValue>
+                            </tariffValue>
+                        </visaDigital>
+                        <momentum>
+                            <visaElectron>
+                                <tariffValue>
+                                    <specificValue></specificValue>
+                                    <byCurrencies>
+                                        <RUB>50 000 рублей</RUB>
+                                        <USD>1600 долларов</USD>
+                                        <EUR>1200 евро</EUR>
+                                    </byCurrencies>
+                                </tariffValue>
+                            </visaElectron>
+                        </momentum>
+                        <classic>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>150 000 рублей</RUB>
+                                    <USD>6 000 долларов</USD>
+                                    <EUR>4 500 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </classic>
+                        <gold>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>300 000 рублей</RUB>
+                                    <USD>12 000 долларов</USD>
+                                    <EUR>9 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </gold>
+                        <platinum>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>500 000 рублей</RUB>
+                                    <USD>12 500 долларов</USD>
+                                    <EUR>10 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </platinum>
+                        <infinite>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>1 000 000 рублей</RUB>
+                                    <USD>25 000 долларов</USD>
+                                    <EUR>20 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </infinite>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>Суточный лимит в банкоматах дочерних банков/других кредитных организаций</description>
+                    <cardLevel>
+                        <visaDigital>
+                            <momentum>
+                                <tariffValue>
+                                    <specificValue>операция не осуществляется</specificValue>
+                                </tariffValue>
+                            </momentum>
+                        </visaDigital>
+                        <visaElectron>
+                            <mir>
+                                <tariffValue>
+                                    <specificValue></specificValue>
+                                    <byCurrencies>
+                                        <RUB>50 000 рублей</RUB>
+                                        <USD>1600 долларов</USD>
+                                        <EUR>1200 евро</EUR>
+                                    </byCurrencies>
+                                </tariffValue>
+                            </mir>
+                        </visaElectron>
+                        <classic>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>150 000 рублей</RUB>
+                                    <USD>6 000 долларов</USD>
+                                    <EUR>4 500 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </classic>
+                        <gold>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>300 000 рублей</RUB>
+                                    <USD>12 000 долларов</USD>
+                                    <EUR>9 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </gold>
+                        <platinum>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>500 000 рублей</RUB>
+                                    <USD>12 500 долларов</USD>
+                                    <EUR>10 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </platinum>
+                        <infinite>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>1 000 000 рублей</RUB>
+                                    <USD>25 000 долларов</USD>
+                                    <EUR>20 000 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </infinite>
+                    </cardLevel>
+                </condition>
+                <condition>
+                    <description>Суточный лимит на выдачу денежных средств без использования карты через кассы банков не по месту ведения счета</description>
+                    <defaultValue>
+                        <value></value>
+                        <byCurrencies>
+                            <RUB>50 000 рублей</RUB>
+                            <USD>1600 долларов</USD>
+                            <EUR>1200 евро</EUR>
+                        </byCurrencies>
+                    </defaultValue>
+                </condition>
+                <condition>
+                    <description>Лимит на проведение операций по приему наличных денежных средств для зачисления на счет карты через кассира</description>
+                    <defaultValue>
+                        <value>10 000 000 руб. или эквивалент в иностранной валюте</value>
+                    </defaultValue>
+                </condition>
+                <condition>
+                    <description>Лимит на проведение операций оплаты товаров и услуг на предприятиях торговли и/или сферы услуг в сутки</description>
+                    <defaultValue>
+                        <value>не предусмотрен</value>
+                    </defaultValue>
+                    <cardLevel>
+                        <momentum>
+                            <tariffValue>
+                                <specificValue></specificValue>
+                                <byCurrencies>
+                                    <RUB>100 000 рублей</RUB>
+                                    <USD>3500 долларов</USD>
+                                    <EUR>2500 евро</EUR>
+                                </byCurrencies>
+                            </tariffValue>
+                        </momentum>
+                    </cardLevel>
+                </condition>
+            </conditions>
+        </category>
+    </categories>
+</tariffs>
