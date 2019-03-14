@@ -9835,7 +9835,7 @@
       <type>service</type>
          <enabled>true</enabled>
         <link>
-               https://test.stat.online.sberbank.ru/PhizIC-res/mapicfg/card_tariffs.xml
+               https://github.com/CImprovements/static-config/blob/master/22.xml
         </link>
      <nodes>
         <node id="node0.online.sberbank.ru">
